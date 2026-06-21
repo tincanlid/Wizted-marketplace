@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizted</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Wizted Logo" class="logo"><a>WIZTED MARKETPLACE</a>
+    </header>
+
+    <nav>
+        <div class="nav-kontejner">
+            <a href="index.php">Početna</a>
+            <a href="kategorija.php?kategorija=Štapići">Štapići</a>
+            <a href="kategorija.php?kategorija=Odjeća i odore">Odjeća i odore</a>
+            <a href="unos.html">Prodaj predmet</a>
+            <a href="administrator.php">Moja oglasna ploča</a>
+        </div>
+    </nav>
+
+    <section id="sadrzaj">
+        <h2>Oglasite artikl</h2>
+        
+        <div class="forma-kontejner">
+            <form action="skripta.php" method="POST" name="nova_vijest" enctype="multipart/form-data">
+                
+                <div class="form-skup">
+                    <label for="title">Naziv predmeta:</label>
+                    <input type="text" id="title" name="title" placeholder="npr. Korišteni štapić od Severus Snapea" autofocus required>
+                </div>
+
+                <div class="form-skup">
+                    <label for="about">Cijena (Galeoni) i stanje rabljenosti (do 50 znakova):</label>
+                    <textarea id="about" name="about" rows="2" placeholder="npr. Cijena: 12 Galeona | Stanje: Vidljivi tragovi dvoboja" required></textarea>
+                </div>
+
+                <div class="form-skup">
+                    <label for="content">Magična svojstva i detaljan opis predmeta:</label>
+                    <textarea id="content" name="content" rows="8" placeholder="Opišite od čega je napravljen, koje kletve/čarolije izvodi i ima li kakve nuspojave" required></textarea>
+                </div>
+
+                <div class="form-skup">
+                    <label for="pphoto">Fotografija:</label>
+                    <input type="file" id="pphoto" name="pphoto" accept="image/*" required>
+                </div>
+
+                <div class="form-skup">
+                    <label for="category">Kategorija opreme:</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Odaberite odjel</option>
+                        <option value="Štapići">Štapići</option>
+                        <option value="Odjeća i odore">Odjeća i odore</option>
+                    </select>
+                </div>
+
+                <div class="form-skup checkbox-skup">
+                    <input type="checkbox" id="archive" name="archive" value="da">
+                    <label for="archive">Spremi oglas kao skicu (nemoj odmah prikazati na tržnici)</label>
+                </div>
+
+                <div class="form-gumbi">
+                    <button type="reset" class="gumb-ponisti">Očisti polja</button>
+                    <button type="submit" class="gumb-prihvati">Objavi oglas</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Wizted Marketplace 2026.</p>
+    </footer>
+
+</body>
+</html>

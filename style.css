@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f091e;
+    color: #e2daf0;
+}
+
+h1, h2, h3, .clanak-naslov {
+    font-family: 'Georgia', serif;
+    color: #dfb76c;
+    letter-spacing: 1px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header a {
+    display: inline-block;
+    color: #bfa6ff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding-bottom: 10px;
+}
+
+
+header .logo {
+    display: block;
+    max-height: 200px;
+    width: auto;
+    filter: drop-shadow(0 0 8px #9b5de5);
+}
+
+nav {
+    background-color: #180f30;
+    width: 100%;
+    border-bottom: 1px solid #3d265e;
+}
+
+.nav-kontejner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #bfa6ff;
+    text-decoration: none;
+    padding: 12px 22px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #3d265e;
+    box-shadow: 0 0 10px rgba(155, 93, 229, 0.4);
+}
+
+.prazan-bijeli-red {
+    display: none;
+}
+
+#sadrzaj {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+#sadrzaj h2 {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #3d265e;
+    padding-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.vijesti-red {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    background-color: #150d28;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    border: 1px solid #251647;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+article {
+    background-color: #1d1236;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #321e58;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(223, 183, 108, 0.2);
+    border-color: #dfb76c;
+}
+
+article:not(:last-child) {
+    border-right: 1px solid #321e58;
+}
+
+.vijest-slika {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #3d265e;
+}
+
+article h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+article h3 a {
+    transition: color 0.2s;
+}
+
+article h3 a:hover {
+    color: #fff !important;
+}
+
+article p {
+    color: #a499be;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.15);
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 3px solid #dfb76c;
+}
+
+.forma-kontejner {
+    background-color: #150d28;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #3d265e;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-skup {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-skup label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #dfb76c;
+    letter-spacing: 0.5px;
+}
+
+.form-skup input[type="text"],
+.form-skup input[type="password"],
+.form-skup textarea,
+.form-skup select {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f091e;
+    border: 1px solid #3d265e;
+    border-radius: 6px;
+    color: #e2daf0;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-skup input:focus,
+.form-skup textarea:focus,
+.form-skup select:focus {
+    outline: none;
+    border-color: #dfb76c;
+    box-shadow: 0 0 8px rgba(223, 183, 108, 0.2);
+}
+
+.checkbox-skup {
+    flex-direction: row;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #251647;
+}
+
+.checkbox-skup input {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    accent-color: #dfb76c;
+}
+
+.checkbox-skup label {
+    margin-bottom: 0;
+    color: #e2daf0;
+    font-weight: normal;
+}
+
+.form-gumbi {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.form-gumbi button, .gumb-ponisti, .gumb-prihvati {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gumb-ponisti {
+    background-color: #721c24;
+    color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.gumb-ponisti:hover {
+    background-color: #af233a;
+    color: #fff;
+}
+
+.gumb-prihvati {
+    background-color: #dfb76c;
+    color: #0f091e;
+}
+
+.gumb-prihvati:hover {
+    background-color: #ffd700;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+}
+
+.clanak-prikaz {
+    background-color: #150d28;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #3d265e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.clanak-kategorija {
+    color: #9b5de5;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.clanak-naslov {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.clanak-meta {
+    padding: 12px 0;
+    margin-bottom: 25px;
+    font-size: 0.88rem;
+    color: #a499be;
+    border-top: 1px solid #251647;
+    border-bottom: 1px solid #251647;
+    display: flex;
+    gap: 25px;
+}
+
+.clanak-slika-okvir {
+    width: 100%;
+    margin-bottom: 30px;
+    border: 2px solid #3d265e;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.clanak-slika {
+    width: 100%;
+    max-height: 1200px;
+    object-fit: fill;
+    display: block;
+}
+
+.clanak-sazetak {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #dfb76c;
+    background: rgba(223, 183, 108, 0.08);
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-left: 4px solid #dfb76c;
+}
+
+.clanak-tekst {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e2daf0;
+    padding-top: 10px;
+}
+
+footer {
+    background-color: #0b0616;
+    color: #7d7295;
+    text-align: center;
+    padding: 30px;
+    border-top: 2px solid #3d265e;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
